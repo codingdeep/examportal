@@ -1,0 +1,14 @@
+<div class="login-wrapper">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Registration here</mat-card-title>
+    </mat-card-header>
+    <form (ngSubmit)="formSubmit()">
+      <mat-card-content  *ngFor="let field of fields">
+        <app-input-field  (getFieldData)="getFieldData($event,field.name)" [field]="field" [value]="user[field.name]"></app-input-field>
+      </mat-card-content>
+      <button mat-stroked-button color="accent" class="btn-block">{{buttonText ? buttonText : "Register"}}</button>
+    </form>
+  </mat-card>
+</div>
+

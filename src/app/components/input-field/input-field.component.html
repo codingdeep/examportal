@@ -1,0 +1,6 @@
+<mat-form-field class="example-full-width" appearance="outline">
+  <mat-label>{{ field.name | titlecase }}</mat-label>
+  <input  value="{{value}}" (change)="changeHandler($event)" type={{field.type}} matInput placeholder={{field.placeholder}}/>
+  <mat-hint *ngIf="field.name=='username' || field.name=='email'"><strong>{{field.name}}</strong> should be unique!</mat-hint>
+</mat-form-field>
+
